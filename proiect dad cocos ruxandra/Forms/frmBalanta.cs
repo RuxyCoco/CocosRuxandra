@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proiect_dad_cocos_ruxandra
+namespace proiect_dad_cocos_ruxandra.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmBalanta : Form
     {
-        public Form1()
+        public frmBalanta()
         {
             InitializeComponent();
+        }
+
+        private void FrmBalanta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

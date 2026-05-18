@@ -1,6 +1,6 @@
-﻿namespace proiect_dad_cocos_ruxandra
+﻿namespace proiect_dad_cocos_ruxandra.Forms
 {
-    partial class Form1
+    partial class frmBalanta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // frmBalanta
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "frmBalanta";
+            this.Text = "FrmBalanta";
+            this.Load += new System.EventHandler(this.FrmBalanta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
-
