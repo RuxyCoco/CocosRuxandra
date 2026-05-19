@@ -28,5 +28,6 @@ namespace proiect_dad_cocos_ruxandra
         public DbSet<Cont> Cont { get; set; }
         public DbSet<Operatie> Operatie { get; set; }
         public DbSet<Rulaje> Rulaje { get; set; }
+        public DbSet<vwBalantaDeVerificare> vwBalantaDeVerificare { get; set; }
     }
 }

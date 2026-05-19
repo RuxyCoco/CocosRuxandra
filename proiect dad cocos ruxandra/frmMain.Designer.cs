@@ -51,6 +51,7 @@
             this.btnBalanta.TabIndex = 1;
             this.btnBalanta.Text = "Deschide balante";
             this.btnBalanta.UseVisualStyleBackColor = true;
+            this.btnBalanta.Click += new System.EventHandler(this.btnBalanta_Click_1);
             // 
             // btnRulaje
             // 
@@ -60,6 +61,7 @@
             this.btnRulaje.TabIndex = 2;
             this.btnRulaje.Text = "Deschide Rulaje";
             this.btnRulaje.UseVisualStyleBackColor = true;
+            this.btnRulaje.Click += new System.EventHandler(this.btnRulaje_Click_1);
             // 
             // frmMain
             // 
@@ -71,6 +73,7 @@
             this.Controls.Add(this.btnConturi);
             this.Name = "frmMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 
         }

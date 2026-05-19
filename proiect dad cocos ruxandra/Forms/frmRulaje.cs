@@ -65,5 +65,10 @@ namespace proiect_dad_cocos_ruxandra.Forms
                 MessageBox.Show($"Datele nu pot fi salvate! {ex.Message}");
             }
         }
+
+    }
+    public class myColl<T> : System.Collections.ObjectModel.ObservableCollection<T>
+    {
+
     }
 }

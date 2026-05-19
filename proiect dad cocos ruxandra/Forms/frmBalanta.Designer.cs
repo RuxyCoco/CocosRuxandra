@@ -33,6 +33,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.AllowNew = true;
+            this.bindingSource1.DataSource = typeof(proiect_dad_cocos_ruxandra.vwBalantaDeVerificare);
+            // 
             // frmBalanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -47,6 +52,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bindingSource1;
+
+        public System.Windows.Forms.BindingSource bindingSource1;
     }
 }

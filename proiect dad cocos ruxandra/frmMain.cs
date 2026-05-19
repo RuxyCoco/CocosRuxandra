@@ -24,16 +24,22 @@ namespace proiect_dad_cocos_ruxandra
             frm.Show();
 
         }
-        private void btnBalanta_Click(object sender, EventArgs e)
+
+        private void btnBalanta_Click_1(object sender, EventArgs e)
         {
             var frm = new frmBalanta();
             frm.Show();
 
         }
-        private void btnRulaje_Click(object sender, EventArgs e)
+
+        private void btnRulaje_Click_1(object sender, EventArgs e)
         {
             var frm = new frmRulaje();
             frm.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
 
         }
     }
