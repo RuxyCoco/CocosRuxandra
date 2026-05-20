@@ -9,6 +9,7 @@
 
 namespace proiect_dad_cocos_ruxandra
 {
+    using proiect_dad_cocos_ruxandra.Forms;
     using System;
     using System.Collections.Generic;
     
@@ -16,7 +17,7 @@ namespace proiect_dad_cocos_ruxandra
     {
         public Operatie()
         {
-            this.Rulaje = new HashSet<Rulaje>();
+            this.Rulaje = new myColl<Rulaje>();
         }
     
         public int Id { get; set; }
@@ -26,6 +27,6 @@ namespace proiect_dad_cocos_ruxandra
         public Nullable<System.DateTime> DataDoc { get; set; }
         public string Explicatie { get; set; }
     
-        public virtual ICollection<Rulaje> Rulaje { get; set; }
+        public virtual myColl<Rulaje> Rulaje { get; set; }
     }
 }

@@ -35,7 +35,7 @@
             // 
             // btnConturi
             // 
-            this.btnConturi.Location = new System.Drawing.Point(39, 41);
+            this.btnConturi.Location = new System.Drawing.Point(39, 70);
             this.btnConturi.Name = "btnConturi";
             this.btnConturi.Size = new System.Drawing.Size(155, 23);
             this.btnConturi.TabIndex = 0;
@@ -45,11 +45,11 @@
             // 
             // btnBalanta
             // 
-            this.btnBalanta.Location = new System.Drawing.Point(39, 70);
+            this.btnBalanta.Location = new System.Drawing.Point(39, 128);
             this.btnBalanta.Name = "btnBalanta";
-            this.btnBalanta.Size = new System.Drawing.Size(155, 23);
+            this.btnBalanta.Size = new System.Drawing.Size(155, 46);
             this.btnBalanta.TabIndex = 1;
-            this.btnBalanta.Text = "Deschide balante";
+            this.btnBalanta.Text = "Deschide balanta de verificare";
             this.btnBalanta.UseVisualStyleBackColor = true;
             this.btnBalanta.Click += new System.EventHandler(this.btnBalanta_Click_1);
             // 

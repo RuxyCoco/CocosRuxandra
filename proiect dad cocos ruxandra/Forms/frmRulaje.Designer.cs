@@ -31,48 +31,53 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRulaje));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtpDataDoc = new System.Windows.Forms.DateTimePicker();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.txtExplicatie = new System.Windows.Forms.TextBox();
+            this.txtNumar = new System.Windows.Forms.TextBox();
             this.Numar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.operatieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bsRulajeOperatie = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.explicatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rulajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idContDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOperatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bsConturi = new System.Windows.Forms.BindingSource(this.components);
+            this.sumaDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumaCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsOperatie = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operatieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRulajeOperatie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsConturi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOperatie)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.bsOperatie;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,6 +103,31 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(774, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -132,16 +162,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -164,26 +187,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // saveToolStripButton
             // 
@@ -195,51 +200,48 @@
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
-            // dateTimePicker1
+            // dtpDataDoc
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(495, 88);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpDataDoc.Location = new System.Drawing.Point(495, 63);
+            this.dtpDataDoc.Name = "dtpDataDoc";
+            this.dtpDataDoc.Size = new System.Drawing.Size(210, 20);
+            this.dtpDataDoc.TabIndex = 1;
             // 
-            // dateTimePicker2
+            // dtpData
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(98, 82);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(220, 20);
-            this.dateTimePicker2.TabIndex = 2;
-            this.dateTimePicker2.Value = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
+            this.dtpData.Location = new System.Drawing.Point(98, 63);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(220, 20);
+            this.dtpData.TabIndex = 2;
+            this.dtpData.Value = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
             // 
-            // textBox1
+            // txtExplicatie
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(607, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtExplicatie.Location = new System.Drawing.Point(98, 89);
+            this.txtExplicatie.Name = "txtExplicatie";
+            this.txtExplicatie.Size = new System.Drawing.Size(607, 20);
+            this.txtExplicatie.TabIndex = 3;
             // 
-            // textBox2
+            // txtNumar
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNumar.Location = new System.Drawing.Point(98, 37);
+            this.txtNumar.Name = "txtNumar";
+            this.txtNumar.Size = new System.Drawing.Size(220, 20);
+            this.txtNumar.TabIndex = 4;
             // 
             // Numar
             // 
             this.Numar.AutoSize = true;
-            this.Numar.Location = new System.Drawing.Point(35, 40);
+            this.Numar.Location = new System.Drawing.Point(51, 40);
             this.Numar.Name = "Numar";
             this.Numar.Size = new System.Drawing.Size(41, 13);
             this.Numar.TabIndex = 5;
             this.Numar.Text = "Numar:";
-            this.Numar.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 82);
+            this.label2.Location = new System.Drawing.Point(59, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 6;
@@ -248,7 +250,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(422, 37);
+            this.label3.Location = new System.Drawing.Point(455, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 7;
@@ -257,7 +259,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(422, 88);
+            this.label4.Location = new System.Drawing.Point(431, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 8;
@@ -266,19 +268,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 128);
+            this.label5.Location = new System.Drawing.Point(37, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Explicatie:";
             // 
-            // textBox3
+            // txtDoc
             // 
-            this.textBox3.Location = new System.Drawing.Point(495, 37);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDoc.Location = new System.Drawing.Point(495, 37);
+            this.txtDoc.Name = "txtDoc";
+            this.txtDoc.Size = new System.Drawing.Size(210, 20);
+            this.txtDoc.TabIndex = 10;
             // 
             // label1
             // 
@@ -291,7 +292,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 166);
+            this.label6.Location = new System.Drawing.Point(21, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 13);
             this.label6.TabIndex = 12;
@@ -303,64 +304,81 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.numarDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn,
-            this.docDataGridViewTextBoxColumn,
-            this.dataDocDataGridViewTextBoxColumn,
-            this.explicatieDataGridViewTextBoxColumn,
-            this.rulajeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.operatieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 195);
+            this.idContDataGridViewTextBoxColumn,
+            this.idOperatieDataGridViewTextBoxColumn,
+            this.contDataGridViewTextBoxColumn,
+            this.sumaDDataGridViewTextBoxColumn,
+            this.sumaCDataGridViewTextBoxColumn,
+            this.operatieDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bsRulajeOperatie;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 131);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(722, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(722, 270);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // operatieBindingSource
+            // bsRulajeOperatie
             // 
-            this.operatieBindingSource.DataSource = typeof(proiect_dad_cocos_ruxandra.Operatie);
+            this.bsRulajeOperatie.DataMember = "Rulaje";
+            this.bsRulajeOperatie.DataSource = this.bsOperatie;
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // numarDataGridViewTextBoxColumn
+            // idContDataGridViewTextBoxColumn
             // 
-            this.numarDataGridViewTextBoxColumn.DataPropertyName = "Numar";
-            this.numarDataGridViewTextBoxColumn.HeaderText = "Numar";
-            this.numarDataGridViewTextBoxColumn.Name = "numarDataGridViewTextBoxColumn";
+            this.idContDataGridViewTextBoxColumn.DataPropertyName = "IdCont";
+            this.idContDataGridViewTextBoxColumn.HeaderText = "IdCont";
+            this.idContDataGridViewTextBoxColumn.Name = "idContDataGridViewTextBoxColumn";
+            this.idContDataGridViewTextBoxColumn.Visible = false;
             // 
-            // dataDataGridViewTextBoxColumn
+            // idOperatieDataGridViewTextBoxColumn
             // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.idOperatieDataGridViewTextBoxColumn.DataPropertyName = "IdOperatie";
+            this.idOperatieDataGridViewTextBoxColumn.HeaderText = "IdOperatie";
+            this.idOperatieDataGridViewTextBoxColumn.Name = "idOperatieDataGridViewTextBoxColumn";
+            this.idOperatieDataGridViewTextBoxColumn.Visible = false;
             // 
-            // docDataGridViewTextBoxColumn
+            // contDataGridViewTextBoxColumn
             // 
-            this.docDataGridViewTextBoxColumn.DataPropertyName = "Doc";
-            this.docDataGridViewTextBoxColumn.HeaderText = "Doc";
-            this.docDataGridViewTextBoxColumn.Name = "docDataGridViewTextBoxColumn";
+            this.contDataGridViewTextBoxColumn.DataPropertyName = "IdCont";
+            this.contDataGridViewTextBoxColumn.DataSource = this.bsConturi;
+            this.contDataGridViewTextBoxColumn.DisplayMember = "Simbol";
+            this.contDataGridViewTextBoxColumn.HeaderText = "Cont";
+            this.contDataGridViewTextBoxColumn.Name = "contDataGridViewTextBoxColumn";
+            this.contDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.contDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.contDataGridViewTextBoxColumn.ValueMember = "Id";
             // 
-            // dataDocDataGridViewTextBoxColumn
+            // bsConturi
             // 
-            this.dataDocDataGridViewTextBoxColumn.DataPropertyName = "DataDoc";
-            this.dataDocDataGridViewTextBoxColumn.HeaderText = "DataDoc";
-            this.dataDocDataGridViewTextBoxColumn.Name = "dataDocDataGridViewTextBoxColumn";
+            this.bsConturi.DataSource = typeof(proiect_dad_cocos_ruxandra.Cont);
             // 
-            // explicatieDataGridViewTextBoxColumn
+            // sumaDDataGridViewTextBoxColumn
             // 
-            this.explicatieDataGridViewTextBoxColumn.DataPropertyName = "Explicatie";
-            this.explicatieDataGridViewTextBoxColumn.HeaderText = "Explicatie";
-            this.explicatieDataGridViewTextBoxColumn.Name = "explicatieDataGridViewTextBoxColumn";
+            this.sumaDDataGridViewTextBoxColumn.DataPropertyName = "SumaD";
+            this.sumaDDataGridViewTextBoxColumn.HeaderText = "SumaD";
+            this.sumaDDataGridViewTextBoxColumn.Name = "sumaDDataGridViewTextBoxColumn";
             // 
-            // rulajeDataGridViewTextBoxColumn
+            // sumaCDataGridViewTextBoxColumn
             // 
-            this.rulajeDataGridViewTextBoxColumn.DataPropertyName = "Rulaje";
-            this.rulajeDataGridViewTextBoxColumn.HeaderText = "Rulaje";
-            this.rulajeDataGridViewTextBoxColumn.Name = "rulajeDataGridViewTextBoxColumn";
+            this.sumaCDataGridViewTextBoxColumn.DataPropertyName = "SumaC";
+            this.sumaCDataGridViewTextBoxColumn.HeaderText = "SumaC";
+            this.sumaCDataGridViewTextBoxColumn.Name = "sumaCDataGridViewTextBoxColumn";
+            // 
+            // operatieDataGridViewTextBoxColumn
+            // 
+            this.operatieDataGridViewTextBoxColumn.DataPropertyName = "Operatie";
+            this.operatieDataGridViewTextBoxColumn.HeaderText = "Operatie";
+            this.operatieDataGridViewTextBoxColumn.Name = "operatieDataGridViewTextBoxColumn";
+            this.operatieDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bsOperatie
+            // 
+            this.bsOperatie.DataSource = typeof(proiect_dad_cocos_ruxandra.Operatie);
             // 
             // frmRulaje
             // 
@@ -370,16 +388,16 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtDoc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Numar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtNumar);
+            this.Controls.Add(this.txtExplicatie);
+            this.Controls.Add(this.dtpData);
+            this.Controls.Add(this.dtpDataDoc);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "frmRulaje";
             this.Text = "FrmRulaje";
@@ -388,7 +406,9 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.operatieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRulajeOperatie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsConturi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOperatie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,26 +429,28 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dtpDataDoc;
+        private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.TextBox txtExplicatie;
+        private System.Windows.Forms.TextBox txtNumar;
         private System.Windows.Forms.Label Numar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource bsOperatie;
+        private System.Windows.Forms.BindingSource bsRulajeOperatie;
+        private System.Windows.Forms.BindingSource bsConturi;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn explicatieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rulajeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource operatieBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idContDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOperatieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn contDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumaDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumaCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operatieDataGridViewTextBoxColumn;
     }
 }

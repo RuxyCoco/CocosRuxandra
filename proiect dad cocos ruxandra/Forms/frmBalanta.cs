@@ -23,7 +23,9 @@ namespace proiect_dad_cocos_ruxandra.Forms
         private void FrmBalanta_Load(object sender, EventArgs e)
         {
             ctx.vwBalantaDeVerificare.Load();
-            
+            bindingSource1.DataSource = ctx.vwBalantaDeVerificare.Local;
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

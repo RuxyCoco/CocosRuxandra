@@ -19,35 +19,13 @@ namespace proiect_dad_cocos_ruxandra.Forms
         }
         databaseEntites dad = new databaseEntites();
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmRulaje_Load(object sender, EventArgs e)
         {
             dad.Operatie.Include("Rulaje").Load();
-            operatieBindingSource.DataSource = dad.Operatie.Local.ToBindingList();
-        }
+            bsOperatie.DataSource = dad.Operatie.Local.ToBindingList();
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            dad.Cont.Load();
+            bsConturi.DataSource = dad.Cont.Local;
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
@@ -55,9 +33,9 @@ namespace proiect_dad_cocos_ruxandra.Forms
             try
             {
                 this.Validate();
-                this.operatieBindingSource.EndEdit();
+                this.bsOperatie.EndEdit();
                 dad.SaveChanges();
-                operatieBindingSource.ResetBindings(false);
+                bsOperatie.ResetBindings(false);
                 MessageBox.Show("Datele au fost salvate");
             }
             catch (Exception ex)
